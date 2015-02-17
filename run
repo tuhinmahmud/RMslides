@@ -1,0 +1,6 @@
+git init
+git commit --allow-empty -m 'Initial Commit'
+git checkout -b gh-pages
+git add .
+git commit -a -m "publishing deck"
+git push git@github.com:tuhinmahmud/RMslides gh-pages

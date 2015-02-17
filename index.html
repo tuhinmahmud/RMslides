@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Regression Model Analysis using shiny App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Regression Model Analysis using shiny App">
+  <meta name="author" content="Tuhin Mahmud">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Regression Model Analysis using shiny App</h1>
+    <h2>Coursera Data Product Project</h2>
+    <p>Tuhin Mahmud<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h1>Executive Summary</h1>
+  </hgroup>
+  <article data-timings="">
+    <h3>Synopsis</h3>
+
+<p>The purpose of this project is to look at a data set of a collection of cars.We are interested in exploring the relationship between a set of variables and miles per gallon (MPG) (outcome). We want to answer following two questions:</p>
+
+<p>-&quot;Is an automatic or manual transmission better for MPG&quot;
+-&quot;Quantify the MPG difference between automatic and manual transmissions&quot;</p>
+
+<h3>Summary</h3>
+
+<p>Studying ther results of the linear regression and multi variable linear regression we find that automatic transmission is better for MPG but impact of transmission type on MPG is lowered when considered with other variables.</p>
+
+<p>For linear regression the MPG increasses 7.245 MPG , whereas if we consider other important variables like cylinder type , weight and horse power the increase in MPG is about 1.809 MPG.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Build and Analyze Linear Regression Models</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Models for analyzing the mtcars dataset</p>
+
+<pre><code class="r">#7 modles for analysis
+model1&lt;-lm(mpg~am,data=data)
+model2&lt;-lm(mpg~cyl,data=data)
+model3&lt;-lm(mpg~cyl+wt,data=data)
+model4&lt;-lm(mpg~cyl+wt+hp,data=data)
+model5&lt;-lm(mpg~am+cyl+wt+hp,data=data)
+model6&lt;-lm(mpg~.,data=data)
+model7&lt;-lm(mpg~ wt + qsec + am,data=data)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Regression analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>## Error in library(ggplot2): there is no package called &#39;ggplot2&#39;
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;ggplot&quot;
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;ggplot&quot;
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;ggplot&quot;
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;ggplot&quot;
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+<pre><code>## Error in print(p1, vp = vplayout(1, 1)): object &#39;p1&#39; not found
+</code></pre>
+
+<pre><code>## Error in print(p2, vp = vplayout(1, 2)): object &#39;p2&#39; not found
+</code></pre>
+
+<pre><code>## Error in print(p3, vp = vplayout(2, 1)): object &#39;p3&#39; not found
+</code></pre>
+
+<pre><code>## Error in print(p4, vp = vplayout(2, 2)): object &#39;p4&#39; not found
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Shinny App and Source Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><h3>Shiny App hosted </h3>
+<a href="https://tuhinmahmud.shinyapps.io/regressionAnalysis/RM_project.Rmd">https://tuhinmahmud.shinyapps.io/regressionAnalysis/RM_project.Rmd</a></li>
+<li><h3> Source code </h3>
+<a href="https://github.com/tuhinmahmud/RegressionModelApp">https://github.com/tuhinmahmud/RegressionModelApp</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Executive Summary'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Build and Analyze Linear Regression Models'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Regression analysis'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Shinny App and Source Code'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title=''>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
