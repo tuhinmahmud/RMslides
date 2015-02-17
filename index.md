@@ -1,5 +1,6 @@
 ---
 title:  Regression Model Analysis using shiny App
+
 subtitle: Coursera - Developing Data Products
 author: Tuhin Mahmud
 framework: io2012
@@ -9,8 +10,8 @@ knit        : slidify::knit2slides
 ---
 
 
-Executive Summary
-========================================================
+## Executive Summary
+
 <h3>Synopsis</h3>
 
 The purpose of this project is to look at a data set of a collection of cars.We are interested in exploring the relationship between a set of variables and miles per gallon (MPG) (outcome). We want to answer following two questions:
@@ -72,3 +73,4 @@ Model 5 statistics is shown below
     https://github.com/tuhinmahmud/RegressionModelApp
 - <h3> Slidify Slides </h3>
     http://tuhinmahmud.github.io/RMslides
+---
